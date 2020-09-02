@@ -4,12 +4,13 @@
 
 
 80 screen 1,0,0:key off
+90 locate 10,10:print "Cargando....."
 1 ' inicializamos los sprites'
-90 gosub 20870
+100 gosub 20870
 1 ' Inicializamos los gráficos'
-100 gosub 30000
+110 gosub 30000
 1 ' Cragamos el main'
-110 load "main.bas",r
+120 load "main.bas",r
 
 
 
