@@ -2,15 +2,17 @@
 
 
 
-
-80 screen 1,0,0:key off
+1 ' si no le ponemos width 32 nos pone 28*8=224px caracteres de ancho por 21*8=168 de alto'
+80 screen 1,0,0:key off:width 32
 90 locate 10,10:print "Cargando....."
 1 ' inicializamos los sprites'
 100 gosub 20870
 1 ' Inicializamos los gráficos'
 110 gosub 30000
+1 ' Cargamos el xbasic'
+120 bload"xbasic.bin",r
 1 ' Cragamos el main'
-120 load "main.bas",r
+130 load "main.bas",r
 
 
 
@@ -30,6 +32,7 @@
 20940 DATA 18,18,24,3C,3C,18,18,3C
 20950 DATA 18,18,10,18,1C,18,18,1C
 20960 DATA 18,18,08,18,38,18,18,38
+1 ' El color al sprite se lo mondremos más adelante con put sprite (aunque tambien sepuede escribir con vpoke)'
 
 
 
@@ -38,28 +41,30 @@
 1' Rutina cargar gráficos
     1' Definicición de tiles
     1 ' En el caracter 224*8=1792
-    30000 FOR I=1792 TO 1799
+    30000 FOR I=1792 TO 1792+7
        30010 READ A$
        30020 VPOKE I,VAL("&H"+A$)
     30030 NEXT I
 
-    1 'En el 225'
-    30040 FOR I=1800 TO 1807
-       30050 READ A$
-       30060 VPOKE I,VAL("&H"+A$)
-    30070 NEXT I
+    1 'En el 233*8=1864 (8 tiles despues, ya que el color es cada 8 tiles)'
+    30040 'FOR I=1864 TO 1864+7
+       30050 'READ A$
+       30060 'VPOKE I,VAL("&H"+A$)
+    30070 'NEXT I
 
 
-    1' DFefinición de colores, en la dirección 8192 empieza la tabla de colores (base(6))
-    1 ' 8192=transparente,8193=negro, 8194=verde, 8195=azul oscuro, 8196=lila, 8197=rojo osuro,8198= azul claro'
-    1 ' 8199=rojo claro, 819a=naranja, 819b=amarillo, 819c=amarillo claro, 819d=verde, 8200=viloleta, 8201=gris, 8020=blanco
-    1 ' Le dimos el color de nuestros tiles
-    30210 VPOKE 8220,&Hc0
-
+    1' Definición de colores, en la dirección 8192 empieza la tabla de colores (base(6))
+    1 ' Le damos el color rojo y transparente 6 0 a nuesto tile
+    30210 vpoke 8220,&h60
+    1 ' Como vamos a utilizar un tile ya prediseñado de los que vienen incuidos (el 204, rayitas diagonales )'
+    1 ' Vamos a ponerle el color amarillo y transparente'
+    30220 vpoke 8214,&hb0
+    1 ' Vamos a poner un color rojo y blanco al tiled de cambio de nivel (el 215, una especie de meta) '
+    30230 vpoke 8215,&h6f
 30270 return
 
 
 1 'Definicion del caracter 224, ladrillo
 30230 DATA E3,E3,E3,3E,3E,3E,F9,F9
 1 'Definicion del caracter 225, picho'
-30240 DATA 18,3C,66,42,C3,C3,C3,FF
+30240 'DATA 18,3C,66,42,C3,C3,C3,FF
