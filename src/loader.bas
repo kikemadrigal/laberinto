@@ -3,7 +3,7 @@
 
 
 1 ' si no le ponemos width 32 nos pone 28*8=224px caracteres de ancho por 21*8=168 de alto'
-80 screen 1,0,0:key off:width 32
+80 screen 1,2,0:key off:width 32
 90 locate 10,10:print "Cargando....."
 1 ' inicializamos los sprites'
 100 gosub 20870
