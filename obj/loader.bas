@@ -84,3 +84,4 @@
 30230 DATA E3,E3,E3,3E,3E,3E,F9,F9
 1 'Definicion del caracter 225, picho'
 30240 'DATA 18,3C,66,42,C3,C3,C3,FF
+

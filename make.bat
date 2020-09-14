@@ -1,10 +1,24 @@
+@echo off
 set TARGET_DSK=disco.dsk
 
+
+rem /*******borrando comentarios*******/
+
+
+
+rem preparamos un dsk vacío
 if exist %TARGET_DSK% del /f /Q %TARGET_DSK%
 copy tools\Disk-Manager\main.dsk .\%TARGET_DSK%
-rem añadimos todos los .bas de la carpeta objects al disco
+
+rem añadimos todos los .bas menos el main en la carpeta objects el /A es para decirle que es ASCII
+copy /A src obj
+
+rem le quitamos comentarios al bas, para ejcutar este comando necesitas tener java jre instalado
+java -jar tools/deletecomments/deletecomments.jar src/main.bas obj/main.bas  
+
+rem Añadimos todos los archivos .bas de la carpeta objects al dsk
 rem por favor mirar for /?
-for /R src/ %%a in (*.bas) do (
+for /R obj/ %%a in (*.bas) do (
     start /wait tools/Disk-Manager/DISKMGR.exe -A -F -C %TARGET_DSK% "%%a")   
 
 rem añadimos todos los arhivos binarios de la carpeta bin al disco
