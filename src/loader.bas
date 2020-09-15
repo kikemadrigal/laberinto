@@ -4,26 +4,31 @@
 
 1 ' si no le ponemos width 32 nos pone 28*8=224px caracteres de ancho por 21*8=168 de alto'
 80 screen 1,0,0:key off:width 32
-90 locate 10,10:print "Cargando....."
+90 print "Cargando sprites"
 1 ' inicializamos los sprites'
 100 gosub 20870
 1 ' Inicializacion de las dimensiones de los arrays de nuestras entidades'
-110 gosub 10000
+110 print "Reservando espacio de arrays"
+120 gosub 10000
 1 ' Inicializamos los gráficos'
-120 gosub 30000
+130 print "Cargando graficos"
+140 gosub 30000
 1 ' Cargamos el xbasic'
-130 bload"xbasic.bin",r
+150 print "Cargando xbasic"
+160 bload"xbasic.bin",r
+170 print "Cargando main"
 1 ' Cragamos el main'
-140 load "main.bas",r
+180 load "main.bas",r
 
 
-1 ' creamos el espacio en la memoria para 3 enemigos'
-1 ' Con em le decimos el espacio con en el enemigo actual que será actualizado o dibujado'
-    10000 em=4
+1 'creamos el espacio en la memoria para 3 enemigos'
+1 'Con em le decimos el espacio con en el enemigo actual que será actualizado o dibujado'
+1 'Para saber lo que es cada variable ir a la inicialización del enemigo'   
+    10000 em=5
     1 ' Component position'
-    10010 DIM ex(em),ey(em)
+    10010 DIM ex(em),ey(em),ep(em),ei(em)
     1 ' Compenent phisics'
-    10020 DIM ev(em)
+    10020 DIM ev(em),el(em)
     1 ' Component render'
     10030 DIM ew(em),eh(em),es(em)
     1 ' Component RPG'
