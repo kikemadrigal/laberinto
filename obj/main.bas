@@ -4,7 +4,7 @@
 40 rem ******************************
 50 defint a-z
 60 'ON STRIG GOSUB 1530
-70 'sprite on:ON SPRITE GOSUB 1900
+70 sprite on:ON SPRITE GOSUB 1900
 75 print "Inicializando mapas"
 80 gosub 8000
 90 gosub 8100

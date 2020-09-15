@@ -7,7 +7,7 @@
 1 'Cuando se pulse el disparo ir a la subrutina de la línea 1530'
 60 'ON STRIG GOSUB 1530
 1 'Cuando haya colisión de sprites ir a la subrutina de la linea 1750'
-70 'sprite on:ON SPRITE GOSUB 1900
+70 sprite on:ON SPRITE GOSUB 1900
 
 
 75 print "Inicializando mapas"
