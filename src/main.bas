@@ -231,7 +231,8 @@
 1 'Guardar_mapa_en_array
     1 '1 cargamos los 5 mapas a levels de cada mundo o word (mm=4+1d el cero=5)
     1 'Cada mapa ocupa 862 bytes'
-    1 'md=mapa dirección, la dirección c001 se la he puesto yo en el archivo binario cuando l creé'
+    1 'md=mapa dirección, la dirección c001 se la he puesto yo en el archivo binario cuando lo creé'
+    1 'El archivo tan solo contiene los datos de la definición de los mapas'
     8100 md=&hc001:locate 0,0:print "Cargando mundo...          "
     8110 if mw=0 then bload"word0.bin",r
     8120 if mw=1 then bload"word1.bin",r
