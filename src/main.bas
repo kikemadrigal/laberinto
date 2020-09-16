@@ -9,7 +9,7 @@
 1 'Cuando se pulse el disparo ir a la subrutina de la línea 1530'
 60 'ON STRIG GOSUB 1530
 1 'Cuando haya colisión de sprites ir a la subrutina de la linea 1750'
-70 'sprite on:ON SPRITE GOSUB 2000
+70 sprite on:ON SPRITE GOSUB 2000
 
 
 
@@ -95,7 +95,7 @@
     1 'Si hay una colision le dejamos la posicion que guardamos antes de cambiarla por pulsar una tecla'
     1760 hl=base(5)+(y/8)*32+(x/8):a=vpeek(hl)
     1 'Si el valor es igual a 244 (nuestro ladrillo) ponemos los valores que tenía antes de pulsar el cursor'
-    1770 'if a=224 then x=xp: y=yp
+    1770 if a=224 then x=xp: y=yp
     1 'Si el valor es un 204 nuestro punto de fuga lo mandamos a otro sitio '
     1780 if a=204 then x=8*16: y=8*18:beep
     1 ' Si el valor el 215 (el tiled de la meta) cambiamos de mapa'

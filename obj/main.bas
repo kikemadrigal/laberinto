@@ -5,7 +5,7 @@
 45 print "Ejecutando instrucciones"
 50 defint a-z: DEFUSR1=&H41:DEFUSR2=&H44
 60 'ON STRIG GOSUB 1530
-70 'sprite on:ON SPRITE GOSUB 2000
+70 sprite on:ON SPRITE GOSUB 2000
 80 gosub 8000
 90 gosub 8100
 100 gosub 8500
@@ -48,7 +48,7 @@
     1510 if mc then gosub 8500
 1520 return
     1760 hl=base(5)+(y/8)*32+(x/8):a=vpeek(hl)
-    1770 'if a=224 then x=xp: y=yp
+    1770 if a=224 then x=xp: y=yp
     1780 if a=204 then x=8*16: y=8*18:beep
     1790 if a=215 then mc=1:ms=ms+1
     1800 if pc=1 then pc=0:sprite on
