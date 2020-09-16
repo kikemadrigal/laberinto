@@ -4,7 +4,7 @@
   <export target="level3.csv" format="csv"/>
  </editorsettings>
  <tileset firstgid="1" source="../tileset.tsx"/>
- <layer id="1" name="Capa de patrones 1" width="32" height="22">
+ <layer id="1" name="Capa de patrones 1" width="32" height="22" opacity="0.93">
   <data encoding="csv">
 2,2,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,
 1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,

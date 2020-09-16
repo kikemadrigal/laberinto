@@ -2,5 +2,5 @@
 # Prueba el juego pincando aquí
 http://msx.tipolisto.es/webmsx/standalone/?disk=files/laberinto.dsk
 
-# Enlace Canvan
+# Enlace kanbam
 https://trello.com/b/WzvkONZl/laberinto

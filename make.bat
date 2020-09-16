@@ -1,7 +1,11 @@
 @echo off
 set TARGET_DSK=disco.dsk
 
-
+rem /*********Creando .bin de la pabtalla
+start /wait tools\sjasm\sjasm.exe src\word0.asm
+start /wait tools\sjasm\sjasm.exe src\word1.asm
+move /Y word0.bin ./bin
+move /Y word1.bin ./bin
 rem /*******borrando comentarios*******/
 
 
