@@ -1,6 +1,6 @@
 10 rem ******************************
-20 rem Program 
-30 rem autor:   
+20 rem Program:  Laberinto
+30 rem autor:    MSX Murcia
 40 rem ******************************
 45 print "Ejecutando instrucciones"
 50 defint a-z: DEFUSR1=&H41:DEFUSR2=&H44
@@ -78,12 +78,12 @@
     6020 ex(0)=0:ey(0)=0:ep(0)=0:ei(0)=0
     6030 ev(0)=0:el(0)=0
     6040 ew(0)=8:eh(0)=8:es(0)=5
-    6050 ea(0)=30:ed(0)=15:ee(0)=100:ef(0)=0
+    6050 ee(0)=100
 6060 return
     6100 ex(en)=ex(0):ey(en)=ey(0):ep(en)=ep(0):ei(0)=ei(0)
     6120 ev(en)=ev(0):el(en)=el(0)
     6130 ew(en)=ew(0):eh(en)=eh(0):es(en)=es(0)
-    6140 ea(en)=ea(0):ed(en)=ed(0):ee(en)=ee(0):ef(en)=ef(0)
+    6140 ee(en)=ee(0)
     6150 en=en+1
 6160 return
     5100 if ms=0 then x=8:y=16

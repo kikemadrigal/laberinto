@@ -1,6 +1,6 @@
 10 rem ******************************
-20 rem Program 
-30 rem autor:   
+20 rem Program:  Laberinto
+30 rem autor:    MSX Murcia
 40 rem ******************************
 45 print "Ejecutando instrucciones"
 1 'Inicilizamos el juego'
@@ -177,7 +177,7 @@
 1 'Componente de render'
     1 'ew=ancho enemigo, eh= alto enemigo, es=enemigo sprite'
 1 'Componente RPG'
-    1 'ea=enemigo ataque, ed=enemgo defnsa,ee=enemigo energia, ef=enemigo fuerza '
+    1 'ee=enemigo energia '
 
 1 'Init'
 1 'con en=1 (enemigo número)le decimos que queremos trabajar con el enemigo 1
@@ -187,7 +187,7 @@
     6020 ex(0)=0:ey(0)=0:ep(0)=0:ei(0)=0
     6030 ev(0)=0:el(0)=0
     6040 ew(0)=8:eh(0)=8:es(0)=5
-    6050 ea(0)=30:ed(0)=15:ee(0)=100:ef(0)=0
+    6050 ee(0)=100
 6060 return
 
 1 ' Crear enemigo'
@@ -199,7 +199,7 @@
     6100 ex(en)=ex(0):ey(en)=ey(0):ep(en)=ep(0):ei(0)=ei(0)
     6120 ev(en)=ev(0):el(en)=el(0)
     6130 ew(en)=ew(0):eh(en)=eh(0):es(en)=es(0)
-    6140 ea(en)=ea(0):ed(en)=ed(0):ee(en)=ee(0):ef(en)=ef(0)
+    6140 ee(en)=ee(0)
     1 'Al sumarle un enemigo cuando volvamos a llamar a esta subrrutina
     1 'Creará el enemigo en la siguiente posición, pero antes fíjate en las dimensiones 
     1 'Que le reservaste en el loader.bas'

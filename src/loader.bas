@@ -33,7 +33,7 @@
     1 ' Component render'
     10030 DIM ew(em),eh(em),es(em)
     1 ' Component RPG'
-    10040 DIM ea(em),ed(em),ee(em),ef(em)
+    10040 DIM ee(em)
 
     1 'Definiendo el espacio de arrays con los valores de los mapas'
     1 'mm=mapas maximos'

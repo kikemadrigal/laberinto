@@ -33,7 +33,7 @@
     1 ' Component render'
     10030 DIM ew(em),eh(em),es(em)
     1 ' Component RPG'
-    10040 DIM ea(em),ed(em),ee(em),ef(em)
+    10040 DIM ee(em)
 
     1 'Definiendo el espacio de arrays con los valores de los mapas'
     1 'mm=mapas maximos'
@@ -82,13 +82,13 @@
     30070 'NEXT I
 
 
-    1' Definición de colores, en la dirección 8192 empieza la tabla de colores (base(6))
-    1 ' Le damos el color rojo y transparente 6 0 a nuesto tile
+    1 'Definición de colores, en la dirección 8192 empieza la tabla de colores (base(6))
+    1 'Le damos el color rojo y transparente 6 0 a nuesto tile
     30210 vpoke 8220,&h60
-    1 ' Como vamos a utilizar un tile ya prediseñado de los que vienen incuidos (el 204, rayitas diagonales )'
-    1 ' Vamos a ponerle el color amarillo y transparente'
+    1 'Como vamos a utilizar un tile ya prediseñado de los que vienen incuidos (el 204, rayitas diagonales )'
+    1 'Vamos a ponerle el color amarillo y transparente'
     30220 vpoke 8214,&hb0
-    1 ' Vamos a poner un color rojo y blanco al tiled de cambio de nivel (el 215, una especie de meta) '
+    1 'Vamos a poner un color rojo y blanco al tiled de cambio de nivel (el 215, una especie de meta) '
     30230 vpoke 8215,&h6f
 30270 return
 
