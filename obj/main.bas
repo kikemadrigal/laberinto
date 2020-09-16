@@ -5,7 +5,7 @@
 45 print "Ejecutando instrucciones"
 50 defint a-z: DEFUSR1=&H41:DEFUSR2=&H44
 60 'ON STRIG GOSUB 1530
-70 sprite on:ON SPRITE GOSUB 2000
+70 'sprite on:ON SPRITE GOSUB 2000
 80 gosub 8000
 90 gosub 8100
 100 gosub 8500
