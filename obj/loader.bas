@@ -20,10 +20,11 @@
 1 ' Cragamos el main'
 180 load "main.bas",r
 
-
-1 'creamos el espacio en la memoria para 3 enemigos'
-1 'Con em le decimos el espacio con en el enemigo actual que será actualizado o dibujado'
-1 'Para saber lo que es cada variable ir a la inicialización del enemigo'   
+    1 'Definiendo el espacio para los arrays con los valores de los enemigos'
+    1 'creamos el espacio en la memoria para 3 enemigos'
+    1 'Con em le decimos el espacio con en el enemigo actual que será actualizado o dibujado'
+    1 'Para saber lo que es cada variable ir a la inicialización del enemigo'   
+    1 'em=enemigos maximos'
     10000 em=5
     1 ' Component position'
     10010 DIM ex(em),ey(em),ep(em),ei(em)
@@ -33,7 +34,11 @@
     10030 DIM ew(em),eh(em),es(em)
     1 ' Component RPG'
     10040 DIM ea(em),ed(em),ee(em),ef(em)
-10050 return
+
+    1 'Definiendo el espacio de arrays con los valores de los mapas'
+    1 'mm=mapas maximos'
+    10050 'mm=6:dim m(23,31,mm-1)
+10060 return
 
 
 1 'Rutina cargar sprites con datas basic'
@@ -51,9 +56,6 @@
 20950 DATA 18,18,10,18,1C,18,18,1C
 20960 DATA 18,18,08,18,38,18,18,38
 1 'definiendo los malotes'
-1 '20970 DATA E3,E3,E3,3E,3E,3E,F9,F9
-1 '20980 DATA 18,3C,66,42,C3,C3,C3,FF
-
 20970 DATA 18,3C,66,42,C3,C3,C3,FF
 20980 DATA 00,00,00,3C,42,FF,FF,FF
 20990 DATA 81,DB,3C,18,18,66,42,C3

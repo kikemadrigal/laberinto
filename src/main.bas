@@ -224,12 +224,14 @@
     1 'mc= mapa cambia, lo utilizaremos para cambiar los copys y así cambiar la pantalla
     8000 mw=0:ms=0:mm=6:mc=0:tn=0
     1 '22 serán la filas y 32 las columnas menos uno, porque así son los arrays'
+    1 'He intenado crear este array en el loader pero me dice out of memory'
     8010 dim m(23,31,mm-1)
 8020 return
 
 1 'Guardar_mapa_en_array
     1 '1 cargamos los 5 mapas a levels de cada mundo o word (mm=4+1d el cero=5)
     1 'Cada mapa ocupa 862 bytes'
+    1 'md=mapa dirección, la dirección c001 se la he puesto yo en el archivo binario cuando l creé'
     8100 md=&hc001:locate 0,0:print "Cargando mundo...          "
     8110 if mw=0 then bload"word0.bin",r
     8120 if mw=1 then bload"word1.bin",r
